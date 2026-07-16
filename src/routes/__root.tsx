@@ -84,14 +84,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "15 años de tradición familiar en Bogotá. Hamburguesas artesanales, chorizos, costillas y cárnicos ahumados. Domicilios y catering para eventos.",
       },
       { name: "author", content: "Comidas Rápidas Don Bruno" },
-      { property: "og:title", content: "Comidas Rápidas Don Bruno" },
+      { property: "og:title", content: "Comidas Rápidas Don Bruno | Carnes ahumadas y comidas rápidas en Bogotá" },
       {
         property: "og:description",
         content:
-          "Sabor artesanal y 15 años de tradición familiar en carnes ahumadas y comidas rápidas en Bogotá.",
+          "15 años de tradición familiar en Bogotá. Hamburguesas artesanales, chorizos, costillas y cárnicos ahumados. Domicilios y catering para eventos.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Comidas Rápidas Don Bruno | Carnes ahumadas y comidas rápidas en Bogotá" },
+      { name: "twitter:description", content: "15 años de tradición familiar en Bogotá. Hamburguesas artesanales, chorizos, costillas y cárnicos ahumados. Domicilios y catering para eventos." },
+      { property: "og:image", content: "https://id-preview--3e2ff9fa-7f88-4065-a055-ef374b4d4504.lovable.app/social-preview.jpg" },
+      { name: "twitter:image", content: "https://id-preview--3e2ff9fa-7f88-4065-a055-ef374b4d4504.lovable.app/social-preview.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
