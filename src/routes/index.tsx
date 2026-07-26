@@ -171,7 +171,7 @@ function Hero() {
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             Sabor artesanal y <span className="text-foreground">15 años de tradición familiar</span> en
-            carnes ahumadas y comidas rápidas en Bogotá.
+            carnes ahumadas y comidas rápidas en Bogotá...
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
