@@ -16,7 +16,6 @@ import {
 
 import logo from "@/assets/food/logo.jpg";
 import qrPago from "@/assets/food/qr-pago.jpg";
-import menuDestacadoAsset from "@/assets/food/menu-destacado.png.asset.json";
 import imgHamburguesaEspecial from "@/assets/food/hamburguesa-especial.jpg";
 import imgHamburguesaTocineta from "@/assets/food/hamburguesa-tocineta.jpg";
 import imgChorizos from "@/assets/food/chorizos.jpg";
@@ -28,8 +27,6 @@ import imgCostillasPoster from "@/assets/food/costillas-poster.jpg";
 import imgPavo from "@/assets/food/pavo-navidad.jpg";
 import imgPernil from "@/assets/food/pernil-navidad.jpg";
 import imgMuchacho from "@/assets/food/muchacho-navidad.jpg";
-
-const menuDestacado = menuDestacadoAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -206,12 +203,12 @@ function Hero() {
           </div>
         </div>
 
-        {/* Hero featured menu image */}
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+        {/* Hero featured image */}
+        <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-sm">
           <div className="aspect-[2/3] overflow-hidden rounded-3xl shadow-card ring-1 ring-border">
             <img
-              src={menuDestacado}
-              alt="Selección de platos principales Don Bruno: hamburguesa, costillas y chorizo artesanal"
+              src={imgHamburguesaEspecial}
+              alt="Hamburguesa artesanal Don Bruno sobre plato azul"
               className="h-full w-full object-cover"
               loading="eager"
             />
