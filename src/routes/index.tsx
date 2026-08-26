@@ -16,6 +16,7 @@ import {
 
 import logo from "@/assets/food/logo.jpg";
 import qrPago from "@/assets/food/qr-pago.jpg";
+import costillasDestacadoAsset from "@/assets/food/costillas-destacado.jpg.asset.json";
 import imgHamburguesaEspecial from "@/assets/food/hamburguesa-especial.jpg";
 import imgHamburguesaTocineta from "@/assets/food/hamburguesa-tocineta.jpg";
 import imgChorizos from "@/assets/food/chorizos.jpg";
