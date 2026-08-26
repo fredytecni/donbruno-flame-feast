@@ -206,27 +206,15 @@ function Hero() {
           </div>
         </div>
 
-        {/* Hero art collage */}
-        <div className="relative mx-auto grid w-full max-w-md grid-cols-6 grid-rows-6 gap-3 lg:max-w-none">
-          <div className="col-span-4 row-span-4 overflow-hidden rounded-3xl shadow-card ring-1 ring-border">
-            <img src={imgHamburguesaEspecial} alt="Hamburguesa especial" className="h-full w-full object-cover" />
-          </div>
-          <div className="col-span-2 row-span-3 overflow-hidden rounded-2xl shadow-card ring-1 ring-border">
-            <img src={imgChorizos} alt="Chorizos artesanales" className="h-full w-full object-cover" />
-          </div>
-          <div className="col-span-2 row-span-3 overflow-hidden rounded-2xl shadow-card ring-1 ring-border">
-            <img src={imgAlaRellena} alt="Alas rellenas" className="h-full w-full object-cover" />
-          </div>
-          <div className="col-span-4 row-span-2 overflow-hidden rounded-2xl bg-gradient-fire p-5 shadow-glow">
-            <div className="flex h-full items-center justify-between gap-4 text-primary-foreground">
-              <div>
-                <p className="font-display text-2xl leading-none">SOLO DOMICILIOS</p>
-                <p className="mt-1 text-xs font-medium opacity-90">
-                  Disfruta desde la comodidad de tu hogar
-                </p>
-              </div>
-              <Truck className="h-10 w-10 shrink-0" />
-            </div>
+        {/* Hero featured menu image */}
+        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+          <div className="aspect-[2/3] overflow-hidden rounded-3xl shadow-card ring-1 ring-border">
+            <img
+              src={menuDestacado}
+              alt="Selección de platos principales Don Bruno: hamburguesa, costillas y chorizo artesanal"
+              className="h-full w-full object-cover"
+              loading="eager"
+            />
           </div>
         </div>
       </div>
