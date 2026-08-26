@@ -205,11 +205,11 @@ function Hero() {
         </div>
 
         {/* Hero featured image */}
-        <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-sm">
-          <div className="aspect-[2/3] overflow-hidden rounded-3xl shadow-card ring-1 ring-border">
+        <div className="relative mx-auto flex w-full max-w-sm items-center justify-center sm:max-w-md lg:max-w-lg">
+          <div className="aspect-[2/3] w-full overflow-hidden rounded-3xl shadow-card ring-1 ring-border">
             <img
-              src={imgHamburguesaEspecial}
-              alt="Hamburguesa artesanal Don Bruno sobre plato azul"
+              src={costillasDestacadoAsset.url}
+              alt="Costillas de cerdo súper jugosas con papas y guacamole - Comidas Rápidas Don Bruno"
               className="h-full w-full object-cover"
               loading="eager"
             />
