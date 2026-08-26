@@ -16,6 +16,7 @@ import {
 
 import logo from "@/assets/food/logo.jpg";
 import qrPago from "@/assets/food/qr-pago.jpg";
+import menuDestacadoAsset from "@/assets/food/menu-destacado.png.asset.json";
 import imgHamburguesaEspecial from "@/assets/food/hamburguesa-especial.jpg";
 import imgHamburguesaTocineta from "@/assets/food/hamburguesa-tocineta.jpg";
 import imgChorizos from "@/assets/food/chorizos.jpg";
@@ -27,6 +28,8 @@ import imgCostillasPoster from "@/assets/food/costillas-poster.jpg";
 import imgPavo from "@/assets/food/pavo-navidad.jpg";
 import imgPernil from "@/assets/food/pernil-navidad.jpg";
 import imgMuchacho from "@/assets/food/muchacho-navidad.jpg";
+
+const menuDestacado = menuDestacadoAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
