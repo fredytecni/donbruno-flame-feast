@@ -203,12 +203,12 @@ function Hero() {
           </div>
         </div>
 
-        {/* Hero featured menu image */}
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+        {/* Hero featured image */}
+        <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-sm">
           <div className="aspect-[2/3] overflow-hidden rounded-3xl shadow-card ring-1 ring-border">
             <img
-              src={menuDestacado}
-              alt="Selección de platos principales Don Bruno: hamburguesa, costillas y chorizo artesanal"
+              src={imgHamburguesaEspecial}
+              alt="Hamburguesa artesanal Don Bruno sobre plato azul"
               className="h-full w-full object-cover"
               loading="eager"
             />
