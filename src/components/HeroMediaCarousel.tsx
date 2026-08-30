@@ -68,7 +68,6 @@ export function HeroMediaCarousel() {
     const el = videoRef.current;
     if (!el) return;
     if (playing) {
-      el.currentTime = 0;
       void el.play().catch(() => {});
     } else {
       el.pause();
