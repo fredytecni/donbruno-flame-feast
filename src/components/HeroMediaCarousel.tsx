@@ -48,6 +48,7 @@ const IMAGE_MS = 4500;
 export function HeroMediaCarousel() {
   const [index, setIndex] = React.useState(0);
   const [playing, setPlaying] = React.useState(true);
+  const [muted, setMuted] = React.useState(true);
   const videoRef = React.useRef<HTMLVideoElement | null>(null);
 
   const go = React.useCallback((dir: number) => {
