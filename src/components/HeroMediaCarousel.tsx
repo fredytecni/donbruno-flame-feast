@@ -1,5 +1,5 @@
 import * as React from "react";
-import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
+import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from "lucide-react";
 
 import v1 from "@/assets/media/video-01.mp4.asset.json";
 import v1p from "@/assets/media/video-01-poster.jpg.asset.json";
