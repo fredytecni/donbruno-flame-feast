@@ -87,7 +87,8 @@ export function HeroMediaCarousel() {
             muted
             playsInline
             autoPlay
-            preload="metadata"
+            preload="auto"
+            onCanPlay={(e) => { if (playing) void e.currentTarget.play().catch(() => {}); }}
             onEnded={() => go(1)}
           />
         ) : (
