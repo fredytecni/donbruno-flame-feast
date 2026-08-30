@@ -90,11 +90,16 @@ export function HeroMediaCarousel() {
             ref={videoRef}
             src={current.src}
             poster={current.poster}
-            className="h-full w-full object-cover"
-            muted
+            className="relative z-10 h-full w-full object-cover"
+            muted={muted}
             playsInline
             autoPlay
-            preload="auto"
+            controls
+            controlsList="nodownload"
+            preload="metadata"
+            onVolumeChange={(e) => setMuted(e.currentTarget.muted)}
+            onPlay={() => setPlaying(true)}
+            onPause={() => setPlaying(false)}
             onCanPlay={(e) => { if (playing) void e.currentTarget.play().catch(() => {}); }}
             onEnded={() => go(1)}
           />
