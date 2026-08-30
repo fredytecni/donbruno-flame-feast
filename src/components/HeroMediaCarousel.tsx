@@ -68,12 +68,18 @@ export function HeroMediaCarousel() {
   React.useEffect(() => {
     const el = videoRef.current;
     if (!el) return;
+    el.muted = muted;
     if (playing) {
-      void el.play().catch(() => {});
+      void el.play().catch(() => {
+        // autoplay with sound can be blocked: fall back to muted
+        el.muted = true;
+        setMuted(true);
+        void el.play().catch(() => {});
+      });
     } else {
       el.pause();
     }
-  }, [index, playing]);
+  }, [index, playing, muted]);
 
   return (
     <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-lg">
