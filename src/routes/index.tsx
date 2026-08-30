@@ -14,9 +14,9 @@ import {
   Star,
 } from "lucide-react";
 
+import { HeroMediaCarousel } from "@/components/HeroMediaCarousel";
 import logo from "@/assets/food/logo.jpg";
 import qrPago from "@/assets/food/qr-pago.jpg";
-import costillasDestacado from "@/assets/food/costillas-destacado.jpg";
 import imgHamburguesaEspecial from "@/assets/food/hamburguesa-especial.jpg";
 import imgHamburguesaTocineta from "@/assets/food/hamburguesa-tocineta.jpg";
 import imgChorizos from "@/assets/food/chorizos.jpg";
