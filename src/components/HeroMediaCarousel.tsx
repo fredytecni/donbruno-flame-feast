@@ -113,26 +113,41 @@ export function HeroMediaCarousel() {
           />
         )}
 
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-charcoal/20" />
+        {current.type === "image" && (
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-charcoal/20" />
+        )}
 
-        <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-charcoal/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-primary backdrop-blur">
+        <span className="absolute left-4 top-4 z-20 inline-flex items-center gap-1.5 rounded-full border border-primary/40 bg-charcoal/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-primary backdrop-blur">
           {current.type === "video" ? "En vivo desde la parrilla" : "Nuestros platos"}
         </span>
 
-        <button
-          type="button"
-          onClick={() => setPlaying((p) => !p)}
-          aria-label={playing ? "Pausar galería" : "Reproducir galería"}
-          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-charcoal/70 text-foreground backdrop-blur transition hover:border-primary hover:text-primary"
-        >
-          {playing ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
-        </button>
+        <div className="absolute right-4 top-4 z-20 flex items-center gap-2">
+          {current.type === "video" && (
+            <button
+              type="button"
+              onClick={() => setMuted((m) => !m)}
+              aria-label={muted ? "Activar sonido" : "Silenciar"}
+              className="inline-flex h-9 items-center gap-1.5 rounded-full border border-primary/50 bg-charcoal/80 px-3 text-[11px] font-semibold uppercase tracking-wide text-primary backdrop-blur transition hover:bg-primary hover:text-charcoal"
+            >
+              {muted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
+              {muted ? "Sonido" : "Audio"}
+            </button>
+          )}
+          <button
+            type="button"
+            onClick={() => setPlaying((p) => !p)}
+            aria-label={playing ? "Pausar galería" : "Reproducir galería"}
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border/60 bg-charcoal/70 text-foreground backdrop-blur transition hover:border-primary hover:text-primary"
+          >
+            {playing ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+          </button>
+        </div>
 
         <button
           type="button"
           onClick={() => go(-1)}
           aria-label="Anterior"
-          className="absolute left-2 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border/60 bg-charcoal/60 text-foreground backdrop-blur transition hover:border-primary hover:text-primary"
+          className="absolute left-2 top-1/2 z-20 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border/60 bg-charcoal/60 text-foreground backdrop-blur transition hover:border-primary hover:text-primary"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -140,12 +155,17 @@ export function HeroMediaCarousel() {
           type="button"
           onClick={() => go(1)}
           aria-label="Siguiente"
-          className="absolute right-2 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border/60 bg-charcoal/60 text-foreground backdrop-blur transition hover:border-primary hover:text-primary"
+          className="absolute right-2 top-1/2 z-20 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-border/60 bg-charcoal/60 text-foreground backdrop-blur transition hover:border-primary hover:text-primary"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
 
-        <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 items-center gap-1.5">
+        <div
+          className={
+            "absolute left-1/2 z-20 flex -translate-x-1/2 items-center gap-1.5 " +
+            (current.type === "video" ? "bottom-16" : "bottom-4")
+          }
+        >
           {slides.map((s, i) => (
             <button
               key={s.src}
