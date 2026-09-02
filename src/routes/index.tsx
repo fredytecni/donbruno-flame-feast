@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 
 import { HeroMediaCarousel } from "@/components/HeroMediaCarousel";
+import { YouTubeShowcase } from "@/components/YouTubeShowcase";
 import logo from "@/assets/food/logo.jpg";
 import qrPago from "@/assets/food/qr-pago.jpg";
 import imgHamburguesaEspecial from "@/assets/food/hamburguesa-especial.jpg";
@@ -95,6 +96,7 @@ function Landing() {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
+      <YouTubeShowcase />
       <Nosotros />
       <Menu />
       <Navidad />
@@ -124,6 +126,7 @@ function Navbar() {
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
           <a href="#nosotros" className="transition hover:text-primary">Nosotros</a>
+          <a href="#videos" className="transition hover:text-primary">Videos</a>
           <a href="#menu" className="transition hover:text-primary">Menú</a>
           <a href="#navidad" className="transition hover:text-primary">Navidad</a>
           <a href="#pagos" className="transition hover:text-primary">Pagos</a>
