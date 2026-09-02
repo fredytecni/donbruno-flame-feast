@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 
 import { HeroMediaCarousel } from "@/components/HeroMediaCarousel";
+import { YouTubeShowcase } from "@/components/YouTubeShowcase";
 import logo from "@/assets/food/logo.jpg";
 import qrPago from "@/assets/food/qr-pago.jpg";
 import imgHamburguesaEspecial from "@/assets/food/hamburguesa-especial.jpg";
