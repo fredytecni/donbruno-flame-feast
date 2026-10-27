@@ -1,21 +1,9 @@
 import { Play, Video } from "lucide-react";
-
-const VIDEOS = [
-  {
-    id: "o4zh7oOjslk",
-    title: "Entrevista Plaza de las Cruces",
-    description: "Conoce la historia y el sabor artesanal de Don Bruno.",
-  },
-  {
-    id: "DxSrvqjWINQ",
-    title: "Ambiente y local",
-    description: "Así vivimos la pasión por el ahumado todos los días.",
-  },
-];
+import { VIDEOS, embedUrl, YT_ALLOW } from "@/lib/videos";
 
 export function YouTubeShowcase() {
   return (
-    <section id="videos" className="relative border-y border-border/60 bg-charcoal/30 py-16 sm:py-24">
+    <section id="galeria-videos" className="relative border-y border-border/60 bg-charcoal/30 py-16 sm:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <div>
@@ -32,18 +20,18 @@ export function YouTubeShowcase() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
           {VIDEOS.map((video) => (
             <article
               key={video.id}
-              className="group overflow-hidden rounded-2xl border border-border bg-surface shadow-card transition hover:border-primary/60"
+              className="overflow-hidden rounded-2xl border border-border bg-surface shadow-card transition hover:border-primary/60"
             >
-              <div className="relative aspect-video w-full overflow-hidden bg-charcoal">
+              <div className="relative aspect-video w-full bg-charcoal">
                 <iframe
-                  src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0&modestbranding=1`}
+                  src={embedUrl(video.id)}
                   title={video.title}
                   loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allow={YT_ALLOW}
                   allowFullScreen
                   className="absolute inset-0 h-full w-full border-0"
                 />
