@@ -161,7 +161,7 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-background/85 to-background" />
       </div>
 
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-12 lg:gap-x-10 lg:pt-24">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 pb-20 pt-28 sm:px-6 lg:grid-cols-12 lg:gap-x-10 lg:pt-28">
         <div className="flex flex-col justify-center lg:col-span-5">
           <span className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-primary">
             <Flame className="h-3.5 w-3.5" />
